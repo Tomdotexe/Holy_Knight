@@ -25,4 +25,12 @@ public class Block extends Rectangle {
             graphics.fillRect(x - (int) GameState.xOffset, y - (int) GameState.yOffset, width, height);
             }
     }
+
+    public void setId() {
+        this.id = id;
+    }
+
+    public int getId(){
+        return id;
+    }
 }

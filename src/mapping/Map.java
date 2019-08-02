@@ -32,7 +32,7 @@ public class Map {
     public void loadMap() {
         InputStream is = this.getClass().getResourceAsStream(path);
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
-
+//here---------------------------------------------------
         try {
             width = Integer.parseInt(br.readLine());
             height = Integer.parseInt(br.readLine());
@@ -42,17 +42,17 @@ public class Map {
             String line = br.readLine();
 
             for(int y = 0; y < height; y++){
+
                 String[] tokens = line.split("\\s+");
 
                 for(int x = 0; x < width; x++){
                         blocks[y][x] = new Block(x * Block.blockSize, y * Block.blockSize, Integer.parseInt(tokens[x]));
                 }
             }
-
         } catch (NumberFormatException | IOException e){
             e.printStackTrace();
         }
-
+//here--------------------------------------------------------
     }
 
     public Block[][] getBlocks(){

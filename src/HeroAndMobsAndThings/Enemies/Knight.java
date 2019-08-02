@@ -48,18 +48,18 @@ public class Knight {
                     }
                     //left
                     if (Collision.knightBlock(new Point(iX + (int) GameState.xOffset - 1, iY + (int) GameState.yOffset + 2), b[i][j]) ||
-                            Collision.knightBlock(new Point(iX + (int) GameState.xOffset - 1, iY + height + (int) GameState.yOffset - 1), b[i][j])) {
+                            Collision.knightBlock(new Point(iX + (int) GameState.xOffset - 2, iY + height + (int) GameState.yOffset - 1), b[i][j])) {
                         left = false;
                     }
                     //top
                     if (Collision.knightBlock(new Point(iX + (int) GameState.xOffset + 1, iY + (int) GameState.yOffset), b[i][j]) ||
-                            Collision.knightBlock(new Point(iX + +width + (int) GameState.xOffset - 1, iY + (int) GameState.yOffset), b[i][j])) {
+                            Collision.knightBlock(new Point(iX + +width + (int) GameState.xOffset - 2, iY + (int) GameState.yOffset), b[i][j])) {
                         jumping = false;
                         falling = true;
                     }
                     //bottom
                     if (Collision.knightBlock(new Point(iX + (int) GameState.xOffset + 2, iY + height + (int) GameState.yOffset + 1), b[i][j]) ||
-                            Collision.knightBlock(new Point(iX + width + (int) GameState.xOffset - 1, iY + height + (int) GameState.yOffset + 1), b[i][j])) {
+                            Collision.knightBlock(new Point(iX + width + (int) GameState.xOffset - 2, iY + height + (int) GameState.yOffset + 1), b[i][j])) {
                         y = b[i][j].getY() - height - GameState.yOffset;
                         falling = false;
                         topCollision = true;

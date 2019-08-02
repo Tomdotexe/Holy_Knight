@@ -1,6 +1,7 @@
 package objects;
 
 import gameState.GameState;
+import resources.Images;
 
 import java.awt.*;
 
@@ -9,6 +10,7 @@ public class Block extends Rectangle {
 
     public static final int blockSize = 64;
     private int id;
+
 
     public Block(int x, int y, int id){
         setBounds(x , y, blockSize, blockSize);
@@ -22,7 +24,7 @@ public class Block extends Rectangle {
     public void draw(Graphics graphics){
         graphics.setColor(Color.ORANGE);
         if(id != 0) {
-            graphics.fillRect(x - (int) GameState.xOffset, y - (int) GameState.yOffset, width, height);
+            graphics.drawImage(Images.blocks[id - 1], x - (int) GameState.xOffset, y - (int) GameState.yOffset, width, height, null);
             }
     }
 

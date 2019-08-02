@@ -2,7 +2,6 @@ package gameState;
 
 import HeroAndMobsAndThings.Enemies.Knight;
 import mapping.Map;
-import objects.Block;
 
 import java.awt.*;
 
@@ -18,7 +17,7 @@ public class Level1State extends GameState {
 
     public void init() {
         knight = new Knight(25, 25);
-        map = new Map("/map1.map");
+        map = new Map("/Maps/map1.map");
 
         xOffset = -200;
         yOffset = -400;

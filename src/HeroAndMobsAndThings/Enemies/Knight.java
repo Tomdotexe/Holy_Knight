@@ -16,12 +16,12 @@ public class Knight {
     private double x, y;
     private int width, height;
     //jump Speed
-    private double jumpSpeed = 5;
+    private double jumpSpeed = 6;
     private double currentJumpSpeed = jumpSpeed;
     //moveSpeed
-    private double moveSpeed = 2.75;
+    private double moveSpeed = 5;
     //fall speed
-    private double maxFallSpeed = 4;
+    private double maxFallSpeed = 5;
     private double currentFallSpeed = 0.1;
 
     public Knight(int width, int height){
